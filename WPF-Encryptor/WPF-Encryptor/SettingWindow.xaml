@@ -1,0 +1,21 @@
+﻿<Window x:Class="WPF_Encryptor.SettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Encryptor"
+        mc:Ignorable="d"
+        Title="Settings" Height="450" Width="800">
+    <Grid Margin="0,0,4,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox HorizontalAlignment="Left" Height="154" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422" Text="{Binding Path=PublicKey, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Label Content="Public key:" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="26" Width="66"/>
+        <Button x:Name="bt_importPublicKey" Content="Import public key from xml file" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="175" RenderTransformOrigin="0.76,0" Height="25" Click="bt_importPublicKey_Click"/>
+        <Button x:Name="bt_OK" Content="OK" HorizontalAlignment="Left" Height="25" Margin="240,209,0,0" VerticalAlignment="Top" Width="70" IsDefault="True" Click="bt_OK_Click"/>
+        <Button x:Name="bt_Cancel" Content="Cancel" HorizontalAlignment="Left" Margin="349,209,0,0" VerticalAlignment="Top" Width="69" Height="25" IsCancel="True" RenderTransformOrigin="-1.827,0.4"/>
+
+    </Grid>
+</Window>

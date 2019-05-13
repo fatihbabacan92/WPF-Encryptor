@@ -20,7 +20,35 @@
                 </Grid>
             </TabItem>
             <TabItem Header="RSA">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid>
+                    <Grid x:Name="grid_encrypt" Margin="10,27,10,10">
+                        <TextBox x:Name="tb_plainFilePath" HorizontalAlignment="Left" Height="28" Margin="10,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="443"/>
+                        <Button x:Name="bt_selPlain" Content="..." HorizontalAlignment="Left" Margin="458,40,0,0" VerticalAlignment="Top" Width="29" Height="28" Click="bt_selPlain_Click"/>
+                        <Label Content="Select a file for encryption:" HorizontalAlignment="Left" Height="27" Margin="10,8,0,0" VerticalAlignment="Top" Width="164" FontWeight="Bold"/>
+                        <Button x:Name="bt_setting" Content="Setting" HorizontalAlignment="Left" Height="29" Margin="413,247,0,0" VerticalAlignment="Top" Width="74" Click="bt_setting_Click"/>
+                        <Button Content="Encrypt" HorizontalAlignment="Left" Height="29" Margin="314,247,0,0" VerticalAlignment="Top" Width="74" Click="bt_encrypt_Click" RenderTransformOrigin="1.932,0.69"/>
+                        <TextBox x:Name="tb_output" HorizontalAlignment="Left" Height="145" Margin="10,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="477" ScrollViewer.VerticalScrollBarVisibility="Auto" TextChanged="tb_output_TextChanged" Text=" " />
+                        <Label Content="Output:" HorizontalAlignment="Left" Height="34" Margin="10,68,0,0" VerticalAlignment="Top" Width="76" FontWeight="Bold"/>
+                    </Grid>
+                    <Menu HorizontalAlignment="Left" VerticalAlignment="Top" Width="517" BorderBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                        <MenuItem Header="File">
+                            <MenuItem x:Name="mi_switch" Header="Switch" Click="mi_switch_Click"/>
+                        </MenuItem>
+                        <MenuItem Header="Tool">
+                            <MenuItem x:Name="mi_genKeyPair" Header="Generate Key Pair" Click="mi_genKeyPair_Click"/>
+                            <MenuItem x:Name="mi_convertKey" Header="Convert pem key to xml" Click="mi_convertKey_Click"/>
+                        </MenuItem>
+                    </Menu>
+                    <Grid x:Name="grid_decrypt" Margin="10,27,10,10" Visibility="Collapsed">
+                        <TextBox x:Name="tb_encryptedFilePath" HorizontalAlignment="Left" Height="28" Margin="10,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="443"/>
+                        <Label Content="Encrypted file path:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="135" FontWeight="Bold"/>
+                        <Button x:Name="bt_selEncrypted" Content="..." HorizontalAlignment="Left" Margin="458,40,0,0" VerticalAlignment="Top" Width="29" Height="28" Click="bt_selEncrypted_Click"/>
+                        <Label Content="Output:" HorizontalAlignment="Left" Height="34" Margin="10,68,0,0" VerticalAlignment="Top" Width="76" FontWeight="Bold"/>
+                        <TextBox x:Name="tb_outputDecrypt" HorizontalAlignment="Left" Height="145" Margin="10,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="477" ScrollViewer.VerticalScrollBarVisibility="Auto" Text=" " TextChanged="tb_outputDecrypt_TextChanged" />
+                        <Button x:Name="bt_decrypt" HorizontalAlignment="Left" Height="29" Margin="314,247,0,0" VerticalAlignment="Top" Width="74" RenderTransformOrigin="1.932,0.69" Content="Decrypt" Click="bt_decrypt_Click"/>
+                        <Button x:Name="bt_settingDecrypt" Content="Setting" HorizontalAlignment="Left" Height="29" Margin="413,247,0,0" VerticalAlignment="Top" Width="74" Click="bt_settingDecrypt_Click"/>
+                    </Grid>
+                </Grid>
             </TabItem>
             <TabItem Header="Steganography">
                 <Grid Background="#FFE5E5E5">

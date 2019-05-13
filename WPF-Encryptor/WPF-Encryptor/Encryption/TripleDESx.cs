@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace WPF_Encryptor.Encryption
 {
-    class TripleDES
+    class TripleDESx
     {
         public TripleDESCryptoServiceProvider tdes { get; set; }
 
-        public TripleDES()
+        public TripleDESx()
         {
             tdes = new TripleDESCryptoServiceProvider();
         }

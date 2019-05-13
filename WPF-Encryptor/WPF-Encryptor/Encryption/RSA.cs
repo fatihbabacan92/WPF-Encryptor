@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_Encryptor.Encryption
 {
-    class AES
+    class RSA
     {
     }
 }

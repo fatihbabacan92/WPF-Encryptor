@@ -94,7 +94,7 @@ namespace WPF_Encryptor
         private void Button3DESSaveKey_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog dlg = new SaveFileDialog();
-            dlg.FileName = "EncryptedImage";
+            dlg.FileName = "3DESKey";
             dlg.Filter = "Text (.txt)|*.txt";
 
             Nullable<bool> result = dlg.ShowDialog();
@@ -114,7 +114,7 @@ namespace WPF_Encryptor
             BitmapImage btmToSave = ToBitmapImage(btm);
 
             SaveFileDialog dlg = new SaveFileDialog();
-            dlg.FileName = "3DESKey";
+            dlg.FileName = "EncryptedImage";
             dlg.Filter = "Image (.png)|*.png";
 
             Nullable<bool> result = dlg.ShowDialog();

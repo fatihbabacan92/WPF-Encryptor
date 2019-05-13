@@ -8,5 +8,6 @@ namespace WPF_Encryptor.Encryption
 {
     class RSA
     {
+
     }
 }
